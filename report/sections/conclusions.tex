@@ -1,13 +1,8 @@
-\begin{mdframed}
-    \textbf{La extensión máxima para esta sección es de 1 página.}
-\end{mdframed}
+Los resultados obtenidos nos permiten evidenciar de forma experimental las diferencias prácticas entre los distintos algoritmos analizados. En el caso del ordenamiento, algoritmos como MergeSort y QuickSort mostraron un rendimiento significativamente superior a SelectionSort, tanto en tiempo como en escalabilidad, mientras que \texttt{std::sort}, optimizado a nivel de biblioteca, superó incluso a los algoritmos recursivos clásicos en eficiencia.
 
-La conclusión de su informe debe enfocarse en el resultado más importante de su trabajo. No se trata de repetir los puntos ya mencionados en el cuerpo del informe, sino de interpretar sus hallazgos desde un nivel más abstracto. En lugar de describir nuevamente lo que hizo, muestre cómo sus resultados responden a la necesidad planteada en la introducción.
+El análisis de uso de memoria, por otro lado, mostró que la eficiencia temporal no siempre va de la mano con un bajo uso de recursos. QuickSort, por ejemplo, mostró un pico inesperado en uso de memoria para entradas grandes, lo que resalta la importancia de considerar múltiples métricas al evaluar algoritmos.
 
-\begin{itemize}
-    \item  No vuelva a describir lo que ya explicó en el desarrollo del informe. En cambio, interprete sus resultados a un nivel superior, mostrando su relevancia y significado.
-    \item Aunque no debe repetir la introducción, la conclusión debe mostrar hasta qué punto logró abordar el problema o necesidad planteada en el inicio. Reflexione sobre el éxito de su análisis o experimento en relación con los objetivos propuestos.
-    \item No es necesario restablecer todo lo que hizo (ya lo ha explicado en las secciones anteriores). En su lugar, centre la conclusión en lo que significan sus resultados y cómo contribuyen al entendimiento del problema o tema abordado.
-    \item No deben centrarse en sí mismos o en lo que hicieron durante el trabajo (por ejemplo, evitando frases como "primero hicimos esto, luego esto otro...").
-    \item Lo más importante es que no se incluyan conclusiones que no se deriven directamente de los resultados obtenidos. Cada afirmación en la conclusión debe estar respaldada por el análisis o los datos presentados. Se debe evitar extraer conclusiones generales o excesivamente amplias que no puedan justificarse con los experimentos realizados.
-\end{itemize}
+Respecto a la multiplicación de matrices, los experimentos mostraron que el algoritmo de Strassen, si bien conceptualmente más eficiente para grandes entradas, incurre en un costo de memoria elevado. El método Naive, en comparación, resultó competitivo e incluso superior en tiempo, mostrando que su simplicidad lo vuelve una alternativa razonable en contextos con pocos datos.
+
+En conjunto, los resultados obtenidos permiten reforzar el entendimiento de que la elección del algoritmo más adecuado depende no sólo de su complejidad teórica, sino también del tipo de entrada, del entorno de ejecución y de los recursos disponibles. Este análisis experimental complementa al estudio teórico y nos entrega una visión más completa sobre el rendimiento de los algoritmos en distintos escenarios.
+

@@ -1,8 +1,27 @@
-\begin{mdframed}
-    \textbf{La extensión máxima para esta sección es de 7 páginas, donde una página es para introducir los experimentos (breve descripción y comentarios sobre los datasets) y 6 páginas para los resultados.}
-\end{mdframed}
+Para la realización de los experimentos, se utilizó un equipo con sistema operativo Windows 10 ejecutando Ubuntu 20.04.6 LTS a través del Subsistema de Windows para Linux (WSL). El procesador es un Intel Core i5-1135G7 a 2.40GHz   2.42 GHz con 8 GB de RAM. La compilación de los programas se realizó con el compilador \texttt{g++} versión 9.4.0, utilizando el estándar \texttt{-std=c++17} y la optimización \texttt{-O2}. Para la visualización de los resultados se empleó Python 3.8 junto con la biblioteca \texttt{matplotlib}.
 
+Los experimentos se dividieron en dos áreas: algoritmos de ordenamiento y algoritmos de multiplicación de matrices. Para cada caso, se implementaron múltiples algoritmos para ser comparados bajo un mismo conjunto de datos.
 
-\epigraph{``\textit{Non-reproducible single occurrences are of no significance to
-science.}''}{---\citeauthor{popper2005logic},\citeyear{popper2005logic} \cite{popper2005logic}}
-En la sección de Experimentos, es fundamental detallar la infraestructura utilizada para asegurar la reproducibilidad de los resultados, un principio clave en cualquier experimento científico. Esto implica especificar tanto el hardware (por ejemplo, procesador Intel Core i7-9700K, 3.6 GHz, 16 GB RAM DDR4, almacenamiento SSD NVMe) como el entorno software (sistema operativo Ubuntu 20.04 LTS, compilador g++ 9.3.0, y cualquier librería relevante). Además, se debe incluir una descripción clara de las condiciones de entrada, los parámetros utilizados y los resultados obtenidos, tales como tiempos de ejecución y consumo de memoria, que permitan a otros replicar los experimentos en entornos similares. \textit{La replicabilidad es un aspecto crítico para validar los resultados en la investigación científica computacional} \cite{inbookFonseca}.
+Para el ordenamiento, se utilizaron:
+\begin{itemize}
+  \item \textbf{SelectionSort}
+  \item \textbf{MergeSort}
+  \item \textbf{QuickSort}
+  \item \textbf{std::sort} (función estándar de C++)
+\end{itemize}
+
+Para la multiplicación de matrices se implementaron:
+\begin{itemize}
+  \item \textbf{Algoritmo Naive} (multiplicación clásica con tres ciclos anidados)
+  \item \textbf{Algoritmo de Strassen}
+\end{itemize}
+
+Cada algoritmo fue evaluado respecto a:
+\begin{itemize}
+  \item Tiempo de ejecución (en microsegundos o segundos según el contexto)
+  \item Uso de memoria (en kilobytes)
+\end{itemize}
+
+Se desarrollaron scripts automatizados que ejecutaron los algoritmos sobre los archivos de entrada. Estos archivos fueron generados previamente por scripts en Python, simulando diferentes condiciones para evaluar el comportamiento de cada algoritmo en diversos casos. Para ordenamiento, se utilizaron arreglos de tamaños variados con orden aleatorio, ascendente y descendente. Para multiplicación de matrices se usaron matrices de tamaños de potencias de 2 con estructuras dispersas, diagonales y densas.
+
+Cada experimento se repitió tres veces por configuración, almacenando los resultados individualmente para luego obtener un promedio. Los datos recolectados se procesaron para generar gráficos comparativos que facilitan el análisis visual del comportamiento de los distintos algoritmos.

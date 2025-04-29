@@ -1,5 +1,10 @@
+Para la evaluación de los algoritmos de ordenamiento y multiplicación de matrices se utilizaron los conjuntos de datos definidos en el enunciado de la tarea, generados mediante los programas en Python.
 
-Siempre 
-es importante generar varias muestras con características similares para una misma entrada, por ejemplo, variando tamaño del input dentro de lo que les permita la infraestructura utilizada en ests informe, con el fin de capturar una mayor diversidad de casos y obtener un análisis más completo del rendimiento de los algoritmos.
-  
-Dado que esta tarea los casos de pueba son descritos en el enunciado, y entregados los programas en PYTHON que los generan, \textbf{no deben} considerar otros casos de prueba, ni otros tamaños de entrada. \textbf{En esta sección sólo debe comentar los casos de prueba} entregados en el enunciado de manera crítica.
+En el caso del ordenamiento de arreglos, se generaron arreglos de tamaños $10^1$, $10^3$, $10^5$ y $10^7$, con tres tipos de orden: ascendente, descendente y aleatorio. Para cada una de estas combinaciones de tamaño y tipo de orden, se generaron tres muestras distintas, permitiendo así observar variabilidad en los resultados debido a diferencias en los datos.
+
+Esta variedad de tamaños permite observar el comportamiento de los algoritmos tanto en entradas pequeñas como en entradas grandes. Asimismo, el uso de distintos órdenes iniciales (ascendente, descendente, aleatorio) es fundamental, ya que ciertos algoritmos como QuickSort o SelectionSort pueden presentar rendimientos distintos según la estructura inicial del arreglo y con esto, el caso promedio se vería afectado.
+
+Para la multiplicación de matrices, se generaron matrices cuadradas de tamaños $2^4$, $2^6$, $2^8$ y $2^{10}$. Se consideraron tres tipos de matrices: dispersas (principalmente ceros), diagonales (valores sólo en la diagonal principal) y densas (valores aleatorios en todas las posiciones). Cada configuración también cuenta con tres muestras distintas.
+
+Esto permite analizar cómo afecta la estructura interna de los datos al rendimiento de los algoritmos de multiplicación, dado que algunos métodos como Strassen podrían comportarse mejor o peor dependiendo de la cantidad de ceros en las matrices.
+
